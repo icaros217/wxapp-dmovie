@@ -1,0 +1,42 @@
+<!--wxml中写结构-->
+<view class="container">
+    <view class="slide">
+        <swiper indicator-dots="true" autoplay="true" interval="8000" duration="1000">
+            <block wx:for="{{list}}" wx:for-index="index" wx:if="{{index < 5}}">
+                <swiper-item>
+                    <image src="{{item.images.large}}" class="slide-image" width="355" height="150" mode="aspectFill"/>
+                </swiper-item>
+            </block>
+        </swiper>
+        <view class="header">
+            <text class="title">豆瓣电影榜单集合</text>
+            <text class="description">最新，最IN的影视信息收集~</text>
+        </view>
+    </view>
+    <view class="board">
+        <navigator url="../list/list?type=in_theaters&name=正在热映" hover-class="none">
+            <view class="board-item">
+                <text>正在热映</text>
+                <image src="/images/arrowright.png" mode="aspectFill"/>
+            </view>
+        </navigator>
+        <navigator url="../list/list?type=coming_soon&name=即将上映" hover-class="none">
+            <view class="board-item">
+                <text>即将上映</text>
+                <image src="/images/arrowright.png" mode="aspectFill"/>
+            </view>
+        </navigator>
+        <navigator url="../list/list?type=top250&name=TOP250" hover-class="none">
+            <view class="board-item">
+                <text>TOP250</text>
+                <image src="/images/arrowright.png" mode="aspectFill"/>
+            </view>
+        </navigator>
+        <!-- <navigator url="../list/list?type=us_box&name=北美票房榜" hover-class="none">
+            <view class="board-item">
+                <text>北美票房榜</text>
+                <image src="../../arrowright.png" mode="aspectFill"/>
+            </view>
+        </navigator> -->
+    </view>
+</view>

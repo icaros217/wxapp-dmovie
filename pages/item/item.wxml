@@ -1,0 +1,16 @@
+<view class="container">
+  <image class="background" src="{{temp.images.large}}" mode="aspectFill"/>
+  <scroll-view class="container" scroll-y="true">
+    <view class="meta">
+      <image class="poster" src="{{temp.images.large}}" mode="aspectFit"/>
+      <text class="title">{{temp.title}}({{temp.year}})</text>
+      <text class="info">评分：{{temp.rating.average}}</text>
+      <text class="info">导演：<block wx:for="{{temp.directors}}">{{item.name}} </block></text>
+      <text class="info">主演：<block wx:for="{{temp.casts}}"> {{item.name}} </block></text>
+    </view>
+    <view class="summary">
+      <text class="label">摘要：</text>
+      <text class="content">{{temp.summary}}</text>
+    </view>
+  </scroll-view>
+</view>

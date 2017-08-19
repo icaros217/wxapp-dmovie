@@ -1,0 +1,13 @@
+<view class="container">
+  <view class="header">
+    <text class="title">关于我</text>
+  </view>
+  <view class="user" bindtap="getUserInfo">
+    <image class="user-avatar" src="../../images/avatar.jpg" mode="aspectFit"/>
+    <text class="user-nickname">麦田</text>
+    <view class="location-info">
+      <image class="location" src="../../images/location.png" mode="aspectFit"/>
+      <text>Zhengzhou, China</text>
+    </view>
+  </view>
+</view>
